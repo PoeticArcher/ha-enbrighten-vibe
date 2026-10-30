@@ -1,0 +1,114 @@
+{
+  "modelId": "ff6w68",
+  "services": [
+    {
+      "actions": [],
+      "code": "",
+      "description": "",
+      "events": [],
+      "name": "默认服务",
+      "properties": [
+        {
+          "abilityId": 20,
+          "accessMode": "rw",
+          "code": "switch_led",
+          "description": "",
+          "extensions": {
+            "iconName": "icon-dp_power",
+            "attribute": "515"
+          },
+          "name": "开关",
+          "typeSpec": {
+            "type": "bool"
+          }
+        },
+        {
+          "abilityId": 26,
+          "accessMode": "rw",
+          "code": "countdown",
+          "description": "",
+          "extensions": {
+            "iconName": "icon-a_nav_timer",
+            "attribute": "514"
+          },
+          "name": "倒计时",
+          "typeSpec": {
+            "type": "value",
+            "max": 86400,
+            "min": 0,
+            "scale": 0,
+            "step": 1,
+            "unit": "s"
+          }
+        },
+        {
+          "abilityId": 28,
+          "accessMode": "wr",
+          "code": "control_data",
+          "description": "",
+          "extensions": {
+            "iconName": "icon-dp_box2",
+            "attribute": "608"
+          },
+          "name": "调节",
+          "typeSpec": {
+            "type": "string",
+            "maxlen": 255
+          }
+        },
+        {
+          "abilityId": 101,
+          "accessMode": "rw",
+          "code": "reverse_direction",
+          "description": "",
+          "name": "流水方向",
+          "typeSpec": {
+            "type": "bool"
+          }
+        },
+        {
+          "abilityId": 104,
+          "accessMode": "rw",
+          "code": "lightcustomization",
+          "description": "bit 1：显示灯泡；bit 0：关闭灯泡；\n如 0b101......表示第1个灯泡开，第2个灯泡关，第3个灯泡关....",
+          "name": "灯串显示",
+          "typeSpec": {
+            "type": "string",
+            "maxlen": 255
+          }
+        },
+        {
+          "abilityId": 106,
+          "accessMode": "rw",
+          "code": "mode",
+          "description": "模式字符串：012345555……5555\n0：模式（单字符0-b）：Fade、Blink、Twinkle、Rainbow、Red White Blue、Red Green White、Mardi Gras、Valentines Day、Autumn、St Patrick Day、Spring、UserColor1、UserColor2、UserColor3、UserColor4、UserColor5\n1：效果（单字符0-7）：Solid、Twinkle、Blink、Pulse、Wave Chase、Chase、Wave、Fase chase\n2：速度（单字符0-f）\n3：亮度（单字符0-f）\n4：颜色个数（单字符0-2）\n5：颜色值（HSV白光）\n",
+          "name": "模式",
+          "typeSpec": {
+            "type": "string",
+            "maxlen": 255
+          }
+        },
+        {
+          "abilityId": 107,
+          "accessMode": "rw",
+          "code": "lamp_number",
+          "description": "默认值48",
+          "name": "灯串头数",
+          "typeSpec": {
+            "type": "enum",
+            "range": [
+              "12",
+              "18",
+              "24",
+              "6",
+              "30",
+              "36",
+              "42",
+              "48"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
