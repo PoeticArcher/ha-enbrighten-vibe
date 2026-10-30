@@ -1,0 +1,44 @@
+name: Bug report
+description: Report an issue with Enbrighten VIBE Cloud.
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Do not include Access IDs, Access Secrets, tokens, local keys or full device IDs.
+        Include only the relevant redacted error and lighting property values.
+  - type: input
+    id: version
+    attributes:
+      label: Integration version
+    validations:
+      required: true
+  - type: input
+    id: ha_version
+    attributes:
+      label: Home Assistant Core version
+    validations:
+      required: true
+  - type: input
+    id: product_id
+    attributes:
+      label: Tuya product ID and firmware version
+      description: Product ID identifies a model; it is different from your device ID.
+    validations:
+      required: true
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Expected and actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant redacted errors
+      render: text
