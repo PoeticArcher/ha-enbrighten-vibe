@@ -1,0 +1,64 @@
+{
+  "title": "Enbrighten VIBE Cloud",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect Enbrighten VIBE",
+        "description": "Use the same Tuya developer project that successfully changed the lights in API Explorer. Find its Access ID and Access Secret on the project's Overview page. Setup reads device information and sends no commands. {error_detail}",
+        "data": {
+          "endpoint": "Data center",
+          "access_id": "Access ID / Client ID",
+          "access_secret": "Access Secret / Client Secret",
+          "device_id": "Tuya device ID",
+          "name": "Light name"
+        }
+      },
+      "reauth_confirm": {
+        "title": "Update Tuya credentials",
+        "description": "Use the same Tuya developer project that successfully changed the lights in API Explorer. Find its Access ID and Access Secret on the project's Overview page. Setup reads device information and sends no commands. {error_detail}",
+        "data": {
+          "endpoint": "Data center",
+          "access_id": "Access ID / Client ID",
+          "access_secret": "Access Secret / Client Secret",
+          "device_id": "Tuya device ID",
+          "name": "Light name"
+        }
+      },
+      "reconfigure": {
+        "title": "Update Tuya connection",
+        "description": "Use the same Tuya developer project that successfully changed the lights in API Explorer. Find its Access ID and Access Secret on the project's Overview page. Setup reads device information and sends no commands. {error_detail}",
+        "data": {
+          "endpoint": "Data center",
+          "access_id": "Access ID / Client ID",
+          "access_secret": "Access Secret / Client Secret",
+          "device_id": "Tuya device ID",
+          "name": "Light name"
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "Tuya rejected the credentials. Check the Access ID, Access Secret and project data center.",
+      "cannot_connect": "Tuya could not be reached or did not authorize a required API. Check project API permissions.",
+      "unsupported_device": "Only Eternity Landscape Lights product wagmuetuwhn4lgr7 with writable mode (DP 106) is supported.",
+      "invalid_device_id": "Enter the Tuya device ID, not an HA entity ID.",
+      "wrong_device": "Use the same controller when updating this entry. Add another integration entry for a different controller.",
+      "invalid_state": "Tuya did not return a usable reported-properties list."
+    },
+    "abort": {
+      "already_configured": "This landscape controller is already configured.",
+      "reauth_successful": "Tuya credentials updated.",
+      "reconfigure_successful": "Tuya connection updated."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Reported-state polling",
+        "description": "Refresh after your commands happens automatically. This interval controls background checks for changes made in the app; each check uses two developer API requests.",
+        "data": {
+          "scan_interval": "Polling interval (seconds)"
+        }
+      }
+    }
+  }
+}
